@@ -98,10 +98,16 @@
               <span>AI 创作者 · 内容与体验设计</span>
             </div>
           </div>
-          <figure>
-            <img src="assets/print/kimi-web-duo.jpg" alt="Kimi 网页创作双案例" />
-            <figcaption>SELECTED WORK 01 / KIMI WEB CREATION</figcaption>
-          </figure>
+          <div class="cover-screens">
+            <figure class="cover-screen-main">
+              <img src="assets/print/kimi-web-duo.jpg" alt="Kimi 网页创作双案例完整截图" />
+              <figcaption>SELECTED WORK 01 / KIMI WEB CREATION</figcaption>
+            </figure>
+            <figure class="cover-screen-secondary">
+              <img src="assets/print/ai-short-films.jpg" alt="AI 短片双案例完整预览" />
+              <figcaption>SELECTED WORK 05 / AI SHORT FILMS</figcaption>
+            </figure>
+          </div>
           <div class="cover-badge">09<br /><span>CASES</span></div>
         </div>
         <footer class="cover-footer">
