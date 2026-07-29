@@ -30,4 +30,9 @@
 
 ## 发布
 
-本项目通过 Sites 保存版本并发布。`.openai/hosting.json` 中的 `project_id` 是现有站点身份，不应删除、重写或复制到其他项目。
+公开版发布在新的 GitHub Pages 仓库：
+
+- 源码：https://github.com/19960705/jinny-kimi-portfolio
+- 网站：https://19960705.github.io/jinny-kimi-portfolio/
+
+Sites 同时保存最终源码版本和私有生产记录。当前工作区不允许把 Sites 设为公网，因此飞书申请只使用上面的 GitHub Pages 地址。`.openai/hosting.json` 中的 `project_id` 是这份私有记录的现有站点身份，不应删除、重写或复制到其他项目。
