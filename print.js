@@ -42,7 +42,10 @@
 
   const compactProject = (item) => `
     <article class="compact-project">
-      <img src="${escapeHtml(printCover(item.cover))}" alt="${escapeHtml(item.coverAlt)}" />
+      <figure>
+        <img src="${escapeHtml(printCover(item.cover))}" alt="${escapeHtml(item.coverAlt)}" />
+        <span>${escapeHtml(item.number)}</span>
+      </figure>
       <div>
         <p class="print-kicker">${escapeHtml(item.number)} · ${escapeHtml(item.category)}</p>
         <h2>${escapeHtml(item.title)}</h2>
@@ -57,7 +60,10 @@
 
   const fullProject = (item) => `
     <article class="full-project">
-      <img src="${escapeHtml(printCover(item.cover))}" alt="${escapeHtml(item.coverAlt)}" />
+      <figure class="full-project-visual">
+        <img src="${escapeHtml(printCover(item.cover))}" alt="${escapeHtml(item.coverAlt)}" />
+        <span>${escapeHtml(item.number)} / SELECTED WORK</span>
+      </figure>
       <div class="full-project-copy">
         <p class="print-kicker">${escapeHtml(item.number)} · ${escapeHtml(item.category)}</p>
         <h1>${escapeHtml(item.title)}</h1>
@@ -80,11 +86,13 @@
 
   const pages = [
     `
-      <section class="print-page cover-page">
+      <section class="print-page cover-page" data-page="01">
+        <div class="cover-ribbon">AI CREATOR · WEB · FILM · VISUAL SYSTEM · CREATIVE TOOL</div>
         <div class="cover-grid">
           <div class="cover-copy">
             <p class="print-kicker">KIMI AMBASSADOR APPLICATION / 2026</p>
-            <h1>把 AI 变成<br /><em>可体验的作品</em>、<br />内容与真实工作流。</h1>
+            <h1>AI 不是<br />作品。<br /><em>被打开、被体验、<br />被记住的才是。</em></h1>
+            <p class="cover-statement">把 AI 变成可体验的作品、内容与真实工作流。</p>
             <div class="cover-person">
               <strong>Jinny Lee</strong>
               <span>AI 创作者 · 内容与体验设计</span>
@@ -94,6 +102,7 @@
             <img src="assets/print/kimi-web-duo.jpg" alt="Kimi 网页创作双案例" />
             <figcaption>SELECTED WORK 01 / KIMI WEB CREATION</figcaption>
           </figure>
+          <div class="cover-badge">09<br /><span>CASES</span></div>
         </div>
         <footer class="cover-footer">
           <span>9 个精选案例</span>
@@ -103,7 +112,7 @@
       </section>
     `,
     `
-      <section class="print-page">
+      <section class="print-page position-page" data-page="02">
         ${pageHeader("02", "POSITIONING")}
         <div class="positioning">
           <p class="print-kicker">WHO I AM</p>
@@ -140,7 +149,7 @@
       </section>
     `,
     `
-      <section class="print-page">
+      <section class="print-page kimi-direct-page" data-page="03">
         ${pageHeader("03", "KIMI DIRECT CASES")}
         <article class="kimi-page">
           <div>
@@ -168,7 +177,7 @@
       </section>
     `,
     `
-      <section class="print-page">
+      <section class="print-page pair-page" data-page="04">
         ${pageHeader("04", "INTERACTIVE & CREATIVE TOOL")}
         <div class="two-project-page">
           ${compactProject(project("infj-midnight-archive"))}
@@ -177,19 +186,19 @@
       </section>
     `,
     `
-      <section class="print-page">
+      <section class="print-page full-case-page peony-page" data-page="05">
         ${pageHeader("05", "INTERACTIVE CINEMA")}
         ${fullProject(project("digital-peony"))}
       </section>
     `,
     `
-      <section class="print-page">
+      <section class="print-page full-case-page film-page" data-page="06">
         ${pageHeader("06", "AI SHORT FILMS")}
         ${fullProject(shortFilms)}
       </section>
     `,
     `
-      <section class="print-page">
+      <section class="print-page pair-page" data-page="07">
         ${pageHeader("07", "AI TOOL & VISUAL SYSTEM")}
         <div class="two-project-page">
           ${compactProject(project("product-growth"))}
@@ -198,7 +207,7 @@
       </section>
     `,
     `
-      <section class="print-page">
+      <section class="print-page pair-page" data-page="08">
         ${pageHeader("08", "WORKFLOW & CULTURE")}
         <div class="two-project-page">
           ${compactProject(project("design-reference-automation"))}
@@ -207,7 +216,7 @@
       </section>
     `,
     `
-      <section class="print-page closing-page">
+      <section class="print-page closing-page" data-page="09">
         ${pageHeader("09", "PUBLIC OUTPUT")}
         <div class="closing-copy">
           <p class="print-kicker">WHAT I CAN DO FOR KIMI</p>
@@ -230,7 +239,7 @@
           ${data.owner.profiles
             .map(
               (profile) =>
-                `<a href="${escapeHtml(profile.url)}"><span>PUBLIC PROFILE</span>${escapeHtml(profile.label)}</a>`,
+                `<a href="${escapeHtml(profile.url)}"><span>PUBLIC PROFILE</span><strong>${escapeHtml(profile.label)}</strong><small>${escapeHtml(profile.url)}</small></a>`,
             )
             .join("")}
         </div>

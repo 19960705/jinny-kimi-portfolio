@@ -7,7 +7,7 @@
       name="description"
       content="Jinny Lee 的 AI 创作作品集：把 AI 变成可体验作品、内容和真实工作流。"
     />
-    <meta name="theme-color" content="#f3efe7" />
+    <meta name="theme-color" content="#0b0b0b" />
     <title>Jinny Lee — AI Creator Portfolio</title>
     <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
@@ -16,11 +16,13 @@
   </head>
   <body>
     <a class="skip-link" href="#main">跳到主要内容</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
     <header class="site-header">
       <a class="brand" href="#top" aria-label="返回首页">
         <span class="brand-mark" aria-hidden="true">JL</span>
-        <span>Jinny Lee</span>
+        <span class="brand-name">Jinny Lee</span>
+        <span class="brand-edition">Portfolio / 2026</span>
       </a>
       <button
         class="menu-button"
@@ -45,74 +47,94 @@
     </header>
 
     <main id="main">
-      <section id="top" class="hero section-shell" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">AI CREATOR / INDEPENDENT PORTFOLIO / 2026</p>
-          <h1 id="hero-title">
-            把 AI 变成<br />
-            <span>可体验的作品、内容</span><br />
-            与真实工作流。
-          </h1>
-          <p class="hero-lead">
-            我是 Jinny Lee。我的工作不止是“生成”，而是从模糊想法出发，做出别人能打开、能理解、能参与、也能验证的最终作品。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">查看 9 个案例</a>
-            <a
-              class="button button-secondary"
-              href="deliverables/Jinny-Lee-Kimi-Ambassador-Portfolio.pdf"
-              download
-              >下载申请 PDF</a
-            >
+      <section id="top" class="hero" aria-labelledby="hero-title">
+        <div class="hero-ambient" aria-hidden="true"></div>
+        <div class="hero-grid section-shell">
+          <div class="hero-meta">
+            <p>JINNY LEE</p>
+            <p>AI CREATOR<br />CONTENT & EXPERIENCE</p>
+            <p>SHANTOU / CHINA<br />2026</p>
+          </div>
+
+          <div class="hero-copy">
+            <p class="eyebrow">INDEPENDENT PORTFOLIO · KIMI AMBASSADOR APPLICATION</p>
+            <h1 id="hero-title">
+              <span>AI 不是</span>
+              <span>作品。</span>
+              <em>被打开、被体验、被记住的</em>
+              <span>才是。</span>
+            </h1>
+            <p class="hero-lead">
+              我是 Jinny Lee。我把模糊想法变成网页、短片、互动叙事与真实工作流——让人能够打开、理解、参与，也能够验证。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work">
+                <span>进入 9 个案例</span><span aria-hidden="true">↓</span>
+              </a>
+              <a
+                class="button button-secondary"
+                href="deliverables/Jinny-Lee-Kimi-Ambassador-Portfolio.pdf"
+                download
+                ><span>下载申请 PDF</span><span aria-hidden="true">↘</span></a
+              >
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="作品预览">
+            <figure class="hero-frame hero-frame-main">
+              <img
+                src="assets/projects/kimi-web-duo.webp"
+                alt="Kimi 网页创作双案例预览"
+              />
+              <figcaption><span>01</span>KIMI WEB CREATION</figcaption>
+            </figure>
+            <figure class="hero-frame hero-frame-small">
+              <img
+                src="assets/projects/ai-short-films.webp"
+                alt="AI 短片双案例预览"
+              />
+              <figcaption><span>05</span>AI SHORT FILMS</figcaption>
+            </figure>
+            <div class="orbit-note" aria-hidden="true">
+              <span>OPEN</span><span>EXPERIENCE</span><span>VERIFY</span>
+            </div>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="作品预览">
-          <figure class="hero-frame hero-frame-main">
-            <img
-              src="assets/projects/kimi-web-duo.webp"
-              alt="Kimi 网页创作双案例预览"
-            />
-            <figcaption>KIMI WEB CREATION / 01</figcaption>
-          </figure>
-          <figure class="hero-frame hero-frame-small">
-            <img
-              src="assets/projects/ai-short-films.webp"
-              alt="AI 短片双案例预览"
-            />
-            <figcaption>AI SHORT FILMS / 05</figcaption>
-          </figure>
-          <div class="orbit-note" aria-hidden="true">可打开<br />可体验<br />可验证</div>
-        </div>
-
-        <div class="hero-index" aria-label="作品集概览">
-          <div><strong>02</strong><span>Kimi 公开网页</span></div>
-          <div><strong>09</strong><span>精选项目</span></div>
-          <div><strong>04</strong><span>网页 / 影像 / 视觉 / 工具</span></div>
+        <div class="hero-marquee" aria-hidden="true">
+          <div>
+            WEB EXPERIENCES <span>✦</span> AI FILMS <span>✦</span> VISUAL SYSTEMS
+            <span>✦</span> CREATIVE TOOLS <span>✦</span> WEB EXPERIENCES
+            <span>✦</span> AI FILMS <span>✦</span> VISUAL SYSTEMS
+            <span>✦</span> CREATIVE TOOLS
+          </div>
         </div>
       </section>
 
       <section class="manifesto">
         <div class="section-shell manifesto-grid">
-          <p class="section-kicker">MY WORKING PRINCIPLE</p>
+          <p class="section-kicker">01 / MY WORKING PRINCIPLE</p>
           <blockquote>
-            AI 负责加速探索，<br />
-            <span>人负责最后的方向、判断与审美。</span>
+            <span>AI 加速探索，</span><br />
+            人决定方向、判断<br />与最后的审美。
           </blockquote>
-          <p>
-            我习惯把每个项目做成一个小闭环：定义问题、形成体验、保留证据、明确状态。公开就是公开，本地完成就是本地完成，不把“生成过”包装成“已经发布”。
-          </p>
+          <div class="manifesto-note">
+            <span>METHOD / 001</span>
+            <p>
+              每个项目都要形成闭环：定义问题、建立体验、保留证据、明确状态。公开就是公开，本地完成就是本地完成。
+            </p>
+          </div>
         </div>
       </section>
 
       <section id="work" class="work section-shell" aria-labelledby="work-title">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">SELECTED WORK / 2026</p>
-            <h2 id="work-title">九个案例，四种把 AI 落到现实的方法。</h2>
+            <p class="section-kicker">02 / SELECTED WORK / 2026</p>
+            <h2 id="work-title">九个作品，<br />不是九次生成。</h2>
           </div>
           <p>
-            从 Kimi 网页创作，到互动叙事、AI 短片、视觉系统和内容工具。展开每个案例，可查看问题、角色、AI 参与方式、成果与证据。
+            从 Kimi 网页到互动叙事、AI 短片、视觉系统和内容工具。每个案例都包含问题、角色、AI 参与方式、成果与可验证证据。
           </p>
         </div>
         <div id="project-list" class="project-list" aria-live="polite"></div>
@@ -122,11 +144,11 @@
         <div class="section-shell">
           <div class="section-heading section-heading-light">
             <div>
-              <p class="section-kicker">WHAT I CAN DO FOR KIMI</p>
-              <h2 id="kimi-title">让更多人不是“听说 Kimi”，而是真的愿意打开来用。</h2>
+              <p class="section-kicker">03 / WHAT I CAN DO FOR KIMI</p>
+              <h2 id="kimi-title">让能力被看见，<br />让场景被记住。</h2>
             </div>
             <p>
-              我能做的，是把产品能力翻译成具体、好看、可体验的用户场景，并持续把过程讲清楚。
+              我把产品语言翻译成普通用户能理解、愿意模仿、乐于分享的真实体验，并持续把过程讲清楚。
             </p>
           </div>
           <div id="capability-list" class="capability-list"></div>
@@ -139,10 +161,10 @@
 
       <section id="profiles" class="profiles section-shell" aria-labelledby="profiles-title">
         <div class="profile-intro">
-          <p class="section-kicker">PUBLIC OUTPUT</p>
-          <h2 id="profiles-title">继续创作，也持续把结果公开。</h2>
+          <p class="section-kicker">04 / PUBLIC OUTPUT</p>
+          <h2 id="profiles-title">作品需要被看见，<br />也需要有出处。</h2>
           <p>
-            这里保留我当前对外使用的公开主页。私人电话、邮箱和内部业务资料不进入这份申请作品集。
+            以下为我当前公开主页，完整网址直接展示。私人电话、邮箱和内部业务资料不进入这份申请作品集。
           </p>
         </div>
         <div id="profile-links" class="profile-links"></div>

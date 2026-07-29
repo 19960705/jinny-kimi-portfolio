@@ -55,6 +55,7 @@
       id="${escapeHtml(project.id)}"
       class="project-card ${index === 0 ? "project-card-featured" : ""}"
       data-project-card
+      data-project-index="${index + 1}"
     >
       <div class="project-cover">
         <img
@@ -138,8 +139,11 @@
           aria-label="${escapeHtml(profile.label)}（新窗口打开）"
         >
           <span>0${index + 1}</span>
-          <strong>${escapeHtml(profile.label)}</strong>
-          <span aria-hidden="true">↗</span>
+          <span class="profile-link-copy">
+            <strong>${escapeHtml(profile.label)}</strong>
+            <small>${escapeHtml(profile.url)}</small>
+          </span>
+          <span class="profile-arrow" aria-hidden="true">↗</span>
         </a>
       `,
     )
@@ -181,6 +185,24 @@
     document
       .querySelectorAll(".project-card, .capability-card")
       .forEach((element) => element.classList.add("is-visible"));
+  }
+
+  const progress = document.querySelector(".scroll-progress");
+  const updateProgress = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
+    progress.style.transform = `scaleX(${Math.min(1, Math.max(0, ratio))})`;
+  };
+  updateProgress();
+  window.addEventListener("scroll", updateProgress, { passive: true });
+
+  if (!reduceMotion) {
+    const hero = document.querySelector(".hero");
+    hero.addEventListener("pointermove", (event) => {
+      const rect = hero.getBoundingClientRect();
+      hero.style.setProperty("--spot-x", `${event.clientX - rect.left}px`);
+      hero.style.setProperty("--spot-y", `${event.clientY - rect.top}px`);
+    });
   }
 
   window.__PORTFOLIO_READY__ = true;
