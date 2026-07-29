@@ -1,0 +1,12 @@
+.DS_Store
+.playwright-cli/
+dist/
+output/
+*.tar.gz
+assets/*
+!assets/projects/
+!assets/projects/**
+!assets/print/
+!assets/print/**
+!assets/media/
+!assets/media/**

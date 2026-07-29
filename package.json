@@ -1,0 +1,12 @@
+{
+  "name": "jinny-lee-kimi-ambassador-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Jinny Lee 的 Kimi 推广大使申请作品集，静态 HTML/CSS/JS 版本。",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "serve": "node scripts/serve.cjs",
+    "validate": "node scripts/validate-site.cjs",
+    "export:pdf": "node scripts/export-pdf.cjs"
+  }
+}
